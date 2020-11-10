@@ -4,8 +4,8 @@
 #include <iostream>
 using namespace std;
 
-const int size_1 = 5;
-const int size_2 = 11;
+//const int size_1 = 5;
+//const int size_2 = 11;
 
 void show(int size_1, int size_2, char Array[5][11]) {
 	for (int i = 0; i < size_1; i++) {
@@ -19,7 +19,57 @@ void show(int size_1, int size_2, char Array[5][11]) {
 
 int main()
 {
-	char Array[size_1][size_2]{
+	//FileSystem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*char Array[size_1][size_2]{
 	{'o','o','o','o','o','o','o','o','o','o','o'},
 	{'o','@','o','o','o','o','o','o','o','*','o'},
 	{'o','o','@','o','o','1','o','o','*','o','o'},
@@ -27,8 +77,42 @@ int main()
 	{'o','o','o','o','o','o','o','o','o','o','o'},
 	};
 
-	show(5, 11, Array);
+	show(5, 11, Array);*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
 // Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
