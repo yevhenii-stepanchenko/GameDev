@@ -1,6 +1,7 @@
 ﻿// GameDev.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 using namespace std;
 
@@ -15,23 +16,89 @@ void show(int size_1, int size_2, char Array[5][11]) {
 		cout << endl;
 	}
 }
-//int MoveToObject();
 
-int main(){
-	
+void MoveToObject(int size_1, int size_2, char Array[5][11]) {            // Delat cherez raznizu koordinat v pervoi stroke massiva s soxranenijam centra v peremenuyu
+	for (int i = 0; i < size_1; i++) {
+		for (int j = 0; j < size_2; j++) {
+			/*if ((Array[i][j + 1] == '1' || Array[i][j + 1] == '2') && (Array[i][j] == '1'|| Array[i][j] == '1')) {    //esli v sosednej yacheyke symvol opuskaet vniz tekushuu
+				Array[i+1][j] = Array[i][j];
+				Array[i][j] = 'o';
+				i++;
+			}*/
+			if (Array[i][j] == '1') {
+				Array[i][j + 1] = Array[i][j];
+				Array[i][j] = 'o';
+				j++;
+			}
+
+			if (Array[i][j] == '2') {
+				Array[i][j - 1] = Array[i][j];
+				Array[i][j] = 'o';
+				j--;
+			}
+		}
+
+	}
+}
+//void save()
+//void load()
+//swapshow()
+//movetakedistance()
+//movestaylast()
+
+
+int main()
+{
+	//float f = 0.1;
+	//int a = 1, num = 200;
+	//char*p = new char[20];
+	//strcpy(p, "Name");
+	//printf("%d %s %d", a, p, num);
+	//cout << endl;
+	//printf("%15.12f", f);
+	//FILE *file = fopen("1.txt", "wt");					//Novaya tema
+	//fprintf(file, "%2d%20s%4d", a, p, num);
+	//cout << endl;
+	//fclose(file);
+
+	//int dRes, secRes;
+	//char *pRes = new char[40];
+
+	//FILE *file1= fopen("1.txt", "rt");
+	//fscanf(file1, "%d %s %d", &dRes, pRes, &secRes);
+	//fclose(file1);
+	////printf("%d", dRes);
+	//printf("%d %s %d" , dRes,pRes,secRes);
+
+
+
+
+
 
 
 	char Array[size_1][size_2]{
 	{'o','o','o','o','o','o','o','o','o','o','o'},
-	{'o','@','o','o','o','o','o','o','o','*','o'},
-	{'o','o','@','o','o','1','o','o','*','o','o'},
-	{'o','@','o','o','o','o','o','o','o','*','o'},
+	{'o','1','o','o','o','o','o','o','o','2','o'},
+	{'o','o','1','o','o','0','o','o','2','o','o'},
+	{'o','1','o','o','o','o','o','o','o','2','o'},
 	{'o','o','o','o','o','o','o','o','o','o','o'},
 	};
 
 	show(5, 11, Array);
-}
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
 
+
+
+
+}
 
 
 
