@@ -213,7 +213,26 @@ int main()  // Calculator
 
 
 
+void MoveToObject(int size_1, int size_2, char Array[5][11]) {            // Delat cherez raznizu koordinat v pervoi stroke massiva s soxranenijam centra v peremenuyu
+	for (int i = 0; i < size_1; i++) {
+		for (int j = 0; j < size_2; j++) {
+			/*if ((Array[i][j + 1] == '1' || Array[i][j + 1] == '2') && (Array[i][j] == '1'|| Array[i][j] == '1')) {    //esli v sosednej yacheyke symvol opuskaet vniz tekushuu
+				Array[i+1][j] = Array[i][j];
+				Array[i][j] = 'o';
+				i++;
+			}*/
+			if (Array[i][j] == '1') {
+				Array[i][j + 1] = Array[i][j];
+				Array[i][j] = 'o';
+				j++;
+			}
 
+			if (Array[i][j] == '2') {
+				Array[i][j - 1] = Array[i][j];
+				Array[i][j] = 'o';
+				j--;
+			}
+		}
 
 
 
