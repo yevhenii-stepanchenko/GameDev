@@ -186,7 +186,16 @@ int main()  // Calculator
 	//		cout << FirstNum << '*' << SecNum << '=' << FirstNum * SecNum << endl;
 	//		break;
 	//}
-	
+		show(5, 11, Array);
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
+	MoveToObject(5, 11, Array);
+	cout << endl;
+	show(5, 11, Array);
 
 	
 
