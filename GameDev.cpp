@@ -249,7 +249,78 @@ void MoveToObject(int size_1, int size_2, char Array[5][11]) {            // Del
 
 
 
+int main()  // Calculator
+{
+	//Vvod
+	char *StartNum = new char[100];
+	cin >> StartNum;
 
+	
+	int lastSymb = 0;
+	int firstSymb = 0;
+
+
+	for (size_t i = 0; i < strlen(StartNum); i++)
+	{
+		if (StartNum[i] == '+' || StartNum[i] == '*') {
+			firstSymb = i;
+			break;
+		}
+	}
+
+	int FirstNum = atoi(StartNum);
+	int SecNum = atoi(StartNum + firstSymb + 1);
+
+	for (size_t i = firstSymb+1; i < strlen(StartNum); i++)
+	{
+		if (StartNum[i] == '+' || StartNum[i] == '*') {
+			lastSymb = i;
+			break;
+		}
+	}
+
+	int ThirdNum = atoi(StartNum + lastSymb + 1);
+
+
+	if (StartNum[firstSymb] == '*' && StartNum[lastSymb] == '+') {
+		cout << FirstNum * SecNum + ThirdNum;
+	}
+	if (StartNum[firstSymb] == '+' && StartNum[lastSymb] == '*') {
+		cout << SecNum * ThirdNum + FirstNum;
+	}
+	if (StartNum[firstSymb] == '+' && StartNum[lastSymb] == '+') {
+		cout << SecNum + ThirdNum + FirstNum;
+	}
+	if (StartNum[firstSymb] == '*' && StartNum[lastSymb] == '*') {
+		cout << SecNum * ThirdNum * FirstNum;
+	}
+	
+
+	if (lastSymb == 0) {
+		switch (StartNum[firstSymb]){
+	case '+':
+		cout << FirstNum << '+' << SecNum << '=' << FirstNum + SecNum << endl;
+		break;
+	case '*':
+		cout << FirstNum << '*' << SecNum << '=' << FirstNum * SecNum << endl;
+		break;
+}
+	}
+	//switch (StartNum[firstSymb]) {
+	//case '*':
+	//	cout << FirstNum * SecNum + ThirdNum;
+	//	break;
+	//case '+':
+	//	break;
+	//}
+
+	//switch (StartNum[lastSymb]) {
+	//case '*':
+	//	cout << SecNum * ThirdNum + FirstNum;
+	//	break;
+	//case '+':
+	//	break;
+	//}
 
 
 
